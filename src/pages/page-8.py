@@ -189,7 +189,7 @@ dash.register_page(__name__, path='/page-8')
 
 layout = html.Div([
     html.Div(id='score_summary', style={'text-align': 'center', 'font-size': '24px', 'margin-top': '30px'}),
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Img(src='/assets/PraTIQUE_couleur.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
     html.Hr(className='orange_line'),
     html.Br(),
     html.Div([

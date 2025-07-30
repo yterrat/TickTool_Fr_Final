@@ -14,34 +14,31 @@ layout = html.Div([
     html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
     html.Hr(className='orange_line'),
     html.Br(),
-    html.P('Methodology', style={'font-size' : '80px', "font-weight": "bold", 'text-align': 'center'}),
+    html.P('Méthodologie', style={'font-size' : '80px', "font-weight": "bold", 'text-align': 'center'}),
     html.Br(),
     html.Br(),
-    #####
-   
-    html.P('Potential for blacklegged tick in environment', style={'font-size' : '35px', "font-weight": "bold", 'text-align': 'center'}),
-    dcc.Markdown("""Using the 6-digit postal code, an initial risk level is determined at a 1km2 resolution using habitat suitability data for Ixodes scapularis (the eastern blacklegged tick), which is then modified by the presence or absence of specific property features, as demonstrated below. Please note that these risk levels indicate risk for encountering *Ixodes scapularis*. They do not indicate risk for Lyme disease or other diseases which can be transmitted by ticks.\n\n\nRisk for *Ixodes scapularis* was computed by integrating data on temperature (cumulative annual surface degree-days above 0◦C) and suitable habitat cover (presence or absence) collected between 2018 and 2023 to give a quantitative index of risk. Further information on the methodology used to compute risk for *Ixodes scapularis* can be found at Kotchi et al (2021) [Scientific publication] (https://doi.org/10.3390/rs13030524). Using the Jenks optimisation method and Jenks natural breaks, the risk index was categorised at a 1km2 resolution into three levels: low, medium, and high. These risk levels were produced for all postal codes within Manitoba, central Canada, and eastern Canada to assess the risk of *Ixodes scapularis* (the eastern blacklegged tick). They are not applicable for assessing the risk of Ixodes pacificus (the western blacklegged tick). Individuals residing west of Manitoba are advised to consult provincial resources and eTick to learn more about potential risk for blacklegged ticks in these regions.""",  style={'marginTop': '50px', 'whiteSpace': 'pre-wrap', 'text-align': 'justify', 'marginLeft': '50px', 'marginRight': '50px'}),
+
+    html.P("Potentiel de présence de la tique à pattes noires dans l'environnement", style={'font-size' : '35px', "font-weight": "bold", 'text-align': 'center'}),
+    dcc.Markdown("""À l'aide du code postal à 6 chiffres, un niveau de risque initial est déterminé à une résolution de 1 km² en utilisant des données sur la convenance de l'habitat pour *Ixodes scapularis* (la tique à pattes noires de l'Est), puis ce niveau est ajusté selon la présence ou l'absence de caractéristiques spécifiques sur la propriété, comme illustré ci-dessous. Veuillez noter que ces niveaux de risque indiquent uniquement le risque de rencontrer *Ixodes scapularis*. Ils ne reflètent pas le risque de contracter la maladie de Lyme ou d'autres maladies transmises par les tiques.
+
+Le risque lié à *Ixodes scapularis* a été calculé en intégrant des données sur la température (nombre annuel de degrés-jours de surface au-dessus de 0°C) et la présence d’un habitat propice, recueillies entre 2018 et 2023, afin d’obtenir un indice de risque quantitatif. Des informations supplémentaires sur la méthodologie utilisée pour calculer ce risque sont disponibles dans Kotchi et al (2021) [Publication scientifique] (https://doi.org/10.3390/rs13030524). En utilisant la méthode d’optimisation de Jenks et les coupures naturelles de Jenks, l’indice de risque a été catégorisé à une résolution de 1 km² en trois niveaux : faible, moyen et élevé. Ces niveaux de risque ont été établis pour tous les codes postaux du Manitoba, du centre et de l’est du Canada pour évaluer le risque de *Ixodes scapularis*. Ils ne sont pas applicables pour évaluer le risque de *Ixodes pacificus* (la tique à pattes noires de l’Ouest). Les personnes résidant à l’ouest du Manitoba sont invitées à consulter les ressources provinciales ainsi que eTick pour en apprendre davantage sur le risque potentiel dans leur région.""", style={'marginTop': '50px', 'whiteSpace': 'pre-wrap', 'text-align': 'justify', 'marginLeft': '50px', 'marginRight': '50px'}),
+    
     html.Img(src='/assets/BLT_in_environment_V2.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
-    
-    #####
-    
+
     html.Hr(className='orange_line'),
     html.Br(),
-    html.P('Risk of exposure', style={'font-size' : '35px', "font-weight": "bold", 'text-align': 'center'}),
-    dcc.Markdown("""Risk associated with outdoor activities is formulated based on prior tick exposure and the number of hours per day spent outdoors for recreational activities or in wooded areas for employment, as demonstrated below""",  style={'marginTop': '50px', 'whiteSpace': 'pre-wrap', 'text-align': 'justify', 'marginLeft': '50px', 'marginRight': '50px'}),
+    html.P("Risque d'exposition", style={'font-size' : '35px', "font-weight": "bold", 'text-align': 'center'}),
+    dcc.Markdown("""Le risque associé aux activités en plein air est formulé à partir d’expositions antérieures aux tiques et du nombre d’heures passées à l’extérieur chaque jour, soit pour des activités récréatives, soit dans des zones boisées dans le cadre professionnel, comme illustré ci-dessous.""", style={'marginTop': '50px', 'whiteSpace': 'pre-wrap', 'text-align': 'justify', 'marginLeft': '50px', 'marginRight': '50px'}),
+
     html.Img(src='/assets/Risk_of_exposure_V2.png', style={'width': '15%', 'height': '15%'}, className='image-gallery'),
-    
-    ####
-    
+
     html.Hr(className='orange_line'),
     html.Br(),
-    html.P('Preventive behaviours', style={'font-size' : '35px', "font-weight": "bold", 'text-align': 'center'}),
-    dcc.Markdown("""Risk associated with the level of adoption of preventive behaviours is formulated based on user responses related to various preventive behaviours and whether the user knows or suspects they have visited or lived in a region where they could contact a disease transmitted by ticks (see below). This risk level does consider actual environmental risk (based on postal code) as this is provided separately. The objective of this risk level is to encourage users to reflect on which preventive behaviours they are currently implementing and would like to implement in the future based on their environmental risk and risk due to outdoor activities. """,  style={'marginTop': '50px', 'whiteSpace': 'pre-wrap', 'text-align': 'justify', 'marginLeft': '50px', 'marginRight': '50px'}),
+    html.P("Comportements préventifs", style={'font-size' : '35px', "font-weight": "bold", 'text-align': 'center'}),
+    dcc.Markdown("""Le risque associé à l’adoption de comportements préventifs est évalué à partir des réponses de l’utilisateur concernant différents comportements de prévention, ainsi que le fait qu’il sache ou soupçonne avoir visité ou vécu dans une région où il pourrait contracter une maladie transmise par les tiques (voir ci-dessous). Ce niveau de risque ne tient pas compte du risque environnemental réel (selon le code postal), car celui-ci est déjà fourni séparément. L’objectif de ce niveau de risque est d’encourager les utilisateurs à réfléchir aux comportements préventifs qu’ils mettent actuellement en œuvre et à ceux qu’ils souhaiteraient adopter à l’avenir, en fonction de leur risque environnemental et de leur exposition extérieure.""", style={'marginTop': '50px', 'whiteSpace': 'pre-wrap', 'text-align': 'justify', 'marginLeft': '50px', 'marginRight': '50px'}),
 
     html.Img(src='/assets/Preventive_behaviours_V2.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
-    ####
-    
+
     html.Br(),
     html.Br(),
-    
-    ])
+])
