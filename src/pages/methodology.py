@@ -11,7 +11,7 @@ import pandas as pd
 dash.register_page(__name__, path='/methodology')
 
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Img(src='/assets/PraTIQUE_couleur.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
     html.Hr(className='orange_line'),
     html.Br(),
     html.P('Méthodologie', style={'font-size' : '80px', "font-weight": "bold", 'text-align': 'center'}),
