@@ -8,7 +8,7 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/page-7')
 
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Img(src='/assets/PraTIQUE_couleur.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
     html.Hr(className='orange_line'),
     html.Br(),
     html.P("Avec votre consentement, les informations fournies dans ce questionnaire pourront être utilisées dans le cadre de projets de recherche. \

@@ -8,7 +8,7 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/page-3')
 
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Img(src='/assets/PraTIQUE_couleur.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
     html.Hr(className='orange_line'),
     html.Br(),
     html.Div([
