@@ -153,9 +153,9 @@ def build_gauge_figure(value, color_ranges):
         layout_config["annotations"] = [
             dict(
                 text=(
-                    "<b>⚠️ Score not computed</b><br>"
-                    "Some answers were missing or incomplete.<br>"
-                    "Please complete the questionnaire and try again."
+                    "<b>⚠️ Le score n'a pas pû être calculé</b><br>"
+                    "Certaines réponses aux questions étaient manquantes ou incomplètes.<br>"
+                    "Merci de réviser le questionaire et de le soumettre à nouveau."
                 ),
                 x=0.5,
                 y=-0.15,  # was -0.35
@@ -1028,19 +1028,18 @@ def display_personalized_pet_advices_text(data):
 
 
 
-#### Print the dictionnary
 
-# @callback(
-#     Output('hidden-div', 'children'),
-#     Input('print-button', 'n_clicks')
-# )
-# def trigger_print(n_clicks):
-#     if n_clicks > 0:
-#         return dcc.Location(id='print-location', href='javascript:window.print();')
-#     return ''
+@callback(
+    Output('hidden-div', 'children'),
+    Input('print-button', 'n_clicks')
+)
+def trigger_print(n_clicks):
+    if n_clicks > 0:
+        return dcc.Location(id='print-location', href='javascript:window.print();')
+    return ''
 
-# ######
-# ######
+######
+######
 
 # #Display data dictionnary for dev
    
