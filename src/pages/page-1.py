@@ -43,7 +43,7 @@ def build_gauge(gauge_id, value, color_ranges, tickvals, ticktext):
 
 
 layout = html.Div([
-    html.Img(src='/assets/TickTOOL_logo.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
+    html.Img(src='/assets/PraTIQUE_couleur.png', style={'width': '40%', 'height': '40%'}, className='image-gallery'),
     html.Hr(className='orange_line'),
     html.Br(),
     html.Div([
