@@ -18,22 +18,22 @@ layout = html.Div([
     html.Br(),
     #######
     #######
-    html.B("Caractéristiques démographiques de votre ménage", style={'font-size': '20px'}),
+    html.B("Caractéristiques démographiques de votre foyer", style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     html.Div([
         html.Div([
-            html.P("Veuillez indiquer votre code postal.", style={'font-size': '20px','margin-bottom': '1px'}), 
+            html.P("Veuillez fournir votre code postal.", style={'font-size': '20px','margin-bottom': '1px'}), 
             html.P("Si vous avez ou visitez plusieurs résidences, \
-                   nous vous suggérons de commencer par saisir le code postal de votre résidence principale, \
+                   nous vous suggérons de commencer par entrer le code postal de votre résidence principale, \
                        puis de répéter ce questionnaire pour les autres résidences.", style={'font-size': '20px', 'margin-bottom': '1px'}),
             html.P("Si vous ne souhaitez pas répondre, vous pouvez laisser ce champ vide. Veuillez noter que sans code postal, nous ne pouvons pas fournir \
-                   d'informations sur votre risque environnemental lié aux tiques à pattes noires. \
+                   d'informations sur votre risque environnemental pour les tiques à pattes noires. \
                        Si vous souhaitez continuer sans fournir votre code postal, vous pouvez toujours recevoir d'autres \
                            informations sur votre profil de risque.", style={'font-size': '20px'}),
             dcc.Input(
                 type='text',
-                placeholder='Saisissez le code postal à 6 caractères',
+                placeholder='Entrez le code postal à 6 caractères',
                 maxLength=6,
                 id='zipcode',
                 style={'marginBottom': '10px', 'width': '200px'}
@@ -53,12 +53,12 @@ layout = html.Div([
                 id = 'which_residence'
             ),
             html.Br(),
-            html.P("Avez-vous déjà complété ce questionnaire auparavant, pour cette résidence ?", style={'font-size': '20px'}),
+            html.P("Avez-vous déjà complété ce questionnaire auparavant, pour cette résidence?", style={'font-size': '20px'}),
             dcc.Dropdown(
                 options=[
                     {'label': 'Oui', 'value': 'yes'},
                     {'label': 'Non', 'value': 'no'},
-                    {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                    {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                 ],
                 style={'width': '200px'},
                 #value='',
@@ -68,7 +68,7 @@ layout = html.Div([
     #######
     #######
     html.Hr(className='grey_blue_line'),
-    html.B('Veuillez indiquer si les énoncés suivants sont vrais pour votre ménage, la plupart du temps.', style={'font-size': '20px'}),
+    html.B('Veuillez indiquer si les énoncés suivants sont vrais pour votre foyer, la plupart du temps.', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     html.Div([
@@ -80,7 +80,7 @@ layout = html.Div([
                 options=[
                     {'label': 'Oui', 'value': 'yes'},
                     {'label': 'Non', 'value': 'no'},
-                    {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                    {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                 ],
                 style={'width': '200px'},
                 #value='',
@@ -96,14 +96,14 @@ layout = html.Div([
         children=[
             html.Br(),
             html.Div([
-                html.Label('Je vis avec au moins un enfant âgé de 0 à 4 ans', style={'font-size': '20px'}),
+                html.Label('Je vis avec au moins un enfant âgé entre 0 et 4 ans', style={'font-size': '20px'}),
                 html.Br(),
                 html.Br(),
                 dcc.Dropdown(
                     options=[
                         {'label': 'Oui', 'value': 'yes'},
                         {'label': 'Non', 'value': 'no'},
-                        {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                        {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                     ],
                     #value='',
                     style={'width': '200px'},
@@ -112,14 +112,14 @@ layout = html.Div([
             ], style={'font-size': '15px', 'marginLeft' : '30px'}),
             html.Br(),
             html.Div([
-                html.Label('Je vis avec au moins un enfant âgé de 5 à 14 ans', style={'font-size': '20px'}),
+                html.Label('Je vis avec au moins un enfant âgé entre 5 et 14 ans', style={'font-size': '20px'}),
                 html.Br(),
                 html.Br(),
                 dcc.Dropdown(
                     options=[
                         {'label': 'Oui', 'value': 'yes'},
                         {'label': 'Non', 'value': 'no'},
-                        {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                        {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                     ],
                     #value='',
                     style={'width': '200px'},
@@ -128,14 +128,14 @@ layout = html.Div([
             ], style={'font-size': '15px', 'marginLeft' : '30px'}),
             html.Br(),
             html.Div([
-                html.Label('Je vis avec au moins un enfant âgé de 15 à 18 ans', style={'font-size': '20px'}),
+                html.Label('Je vis avec au moins un enfant âgé entre 15 et 18 ans', style={'font-size': '20px'}),
                 html.Br(),
                 html.Br(),
                 dcc.Dropdown(
                     options=[
                         {'label': 'Oui', 'value': 'yes'},
                         {'label': 'Non', 'value': 'no'},
-                        {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                        {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                     ],
                     #value='',
                     style={'width': '200px'},
@@ -144,14 +144,14 @@ layout = html.Div([
             ], style={'font-size': '15px', 'marginLeft' : '30px'}),
             html.Br(),
             html.Div([
-                html.Label('Je vis avec au moins une personne de plus de 18 ans', style={'font-size': '20px'}),
+                html.Label('Je vis avec au moins une personne âgée de plus de 18 ans', style={'font-size': '20px'}),
                 html.Br(),
                 html.Br(),
                 dcc.Dropdown(
                     options=[
                         {'label': 'Oui', 'value': 'yes'},
                         {'label': 'Non', 'value': 'no'},
-                        {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                        {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                     ],
                     style={'width': '200px'},
                     #value='',
@@ -163,19 +163,19 @@ layout = html.Div([
     #######
     #######
     html.Hr(className='grey_blue_line'),
-    html.B('Veuillez indiquer lesquels des énoncés suivants s\'appliquent à votre situation :', style={'font-size': '20px'}),
+    html.B('Veuillez indiquer lequel des énoncés suivants s\'applique à votre situation :', style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     html.Div([
         html.Div([
-            html.Label('Il y a au moins un chien dans mon ménage', style={'font-size': '20px'}),
+            html.Label('Il y a au moins un chien dans mon foyer', style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
             dcc.Dropdown(
                 options=[
                     {'label': 'Oui', 'value': 'yes'},
                     {'label': 'Non', 'value': 'no'},
-                    {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                    {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                 ],
                 style={'width': '200px'},
                 #value='',
@@ -184,14 +184,14 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Il y a au moins un chat dans mon ménage qui sort à l\'extérieur', style={'font-size': '20px'}),
+            html.Label('Il y a au moins un chat dans mon foyer qui sort à l\'extérieur', style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
             dcc.Dropdown(
                 options=[
                     {'label': 'Oui', 'value': 'yes'},
                     {'label': 'Non', 'value': 'no'},
-                    {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                    {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                 ],
                 style={'width': '200px'},
                 #value='',
@@ -207,7 +207,7 @@ layout = html.Div([
                 options=[
                     {'label': 'Oui', 'value': 'yes'},
                     {'label': 'Non', 'value': 'no'},
-                    {'label': 'Je préfère ne pas répondre', 'value': 'prefer_not_to_say'}
+                    {'label': 'Je préfère ne pas le dire', 'value': 'prefer_not_to_say'}
                 ],
                 #value='',
                 style={'width': '200px'},
@@ -227,7 +227,7 @@ layout = html.Div([
             html.Br(),
             html.Div([
                 html.Div([
-                    html.Label('Au cours des 12 derniers mois, avez-vous utilisé des produits anti-tiques (ex : Bravecto®, K9 Advantix®II, NexGard®) pour votre chien ?', style={'font-size': '20px'}),
+                    html.Label('Au cours des 12 derniers mois, avez-vous utilisé des produits anti-tiques (ex. Bravecto®, K9 Advantix®II, NexGard®) pour votre chien?', style={'font-size': '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.Dropdown(
@@ -243,7 +243,7 @@ layout = html.Div([
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Br(),
                 html.Div([
-                    html.Label('Avez-vous fait vacciner votre chien contre la maladie de Lyme ?', style={'font-size': '20px'}),
+                    html.Label('Avez-vous fait vacciner votre chien contre la maladie de Lyme?', style={'font-size': '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.Dropdown(
@@ -273,7 +273,7 @@ layout = html.Div([
             html.Br(),
             html.Div([
                 html.Div([
-                    html.Label('Au cours des 12 derniers mois, avez-vous protégé votre chat en utilisant des produits anti-tiques (ex : Bravecto®) ?', style={'font-size': '20px'}),
+                    html.Label('Au cours des 12 derniers mois, avez-vous protégé votre chat en utilisant des produits anti-tiques (ex. Bravecto®)?', style={'font-size': '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.Dropdown(
@@ -293,12 +293,12 @@ layout = html.Div([
     #######
     #######
     html.Hr(className='grey_blue_line'),
-    html.B("Les questions suivantes concernent votre domicile :", style={'font-size': '20px'}),
+    html.B("Les questions suivantes portent sur votre domicile :", style={'font-size': '20px'}),
     html.Br(),
     html.Br(),
     html.Div([
         html.Div([
-            html.Label('Vivez-vous à proximité (à moins de 500 pieds ou 150 mètres) d\'une zone boisée ?', style={'font-size': '20px'}),
+            html.Label('Vivez-vous à proximité (à moins de 500 pieds ou 150 mètres) d\'une zone boisée?', style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
             dcc.Dropdown(
@@ -314,7 +314,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Avez-vous accès à une cour, un jardin ou une zone boisée ?', style={'font-size': '20px'}),
+            html.Label('Avez-vous accès à une cour, un jardin ou une zone boisée?', style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
             dcc.Dropdown(
@@ -330,7 +330,7 @@ layout = html.Div([
         ], style={'font-size': '15px', 'marginLeft' : '30px'}),
         html.Br(),
         html.Div([
-            html.Label('Êtes-vous au courant de la présence de cerfs sur votre propriété, ou la soupçonnez-vous ?', style={'font-size': '20px'}),
+            html.Label('Êtes-vous au courant de, ou soupçonnez-vous, la présence de cerfs sur votre propriété?', style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
             dcc.Dropdown(
@@ -351,11 +351,11 @@ layout = html.Div([
     html.Div(
         id='courtyard_questions',
         children=[
-            html.B("Puisque vous avez accès à une cour, un jardin ou une zone boisée, y a-t-il les éléments suivants sur votre propriété ?", style={'font-size': '20px'}),
+            html.B("Comme vous avez accès à une cour, un jardin ou une zone boisée, y a-t-il quelque chose parmi les éléments suivants sur votre propriété?", style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
             html.Div([
-                html.Label('Zones herbacées ou forestières/lisières', style={'font-size': '20px'}),
+                html.Label('Zones/bordures herbacées ou forestières', style={'font-size': '20px'}),
                 html.Br(),
                 html.Br(),
                 dcc.Dropdown(
@@ -421,12 +421,12 @@ layout = html.Div([
             ######
             html.Hr(className='grey_blue_line'),
             #######
-            html.B("À quelle fréquence mettez-vous en pratique les activités suivantes sur votre propriété ?", style={'font-size': '20px'}),
+            html.B("À quelle fréquence appliquez-vous les pratiques suivantes sur votre propriété?", style={'font-size': '20px'}),
             html.Br(),
             html.Br(),
             html.Div([
                 html.Div([
-                    html.Label('Tonte régulière durant le printemps, l\'été et l\'automne', style={'font-size': '20px'}),
+                    html.Label('Tonte régulière pendant le printemps, l\'été et l\'automne', style={'font-size': '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.Dropdown(
@@ -462,7 +462,7 @@ layout = html.Div([
                     html.Br()
                 ], style={'font-size': '15px', 'marginLeft' : '30px'}),
                 html.Div([
-                    html.Label('Défrichage des broussailles herbacées et élagage des branches durant le printemps, l\'été et l\'automne', style={'font-size': '20px'}),
+                    html.Label('Débroussaillage herbacé et élagage des branches pendant le printemps, l\'été et l\'automne', style={'font-size': '20px'}),
                     html.Br(),
                     html.Br(),
                     dcc.Dropdown(
